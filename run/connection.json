@@ -1,0 +1,121 @@
+{
+    "certificateAuthorities": {
+        "ca.org0.example.com": {
+            "caName": "ca.org0.example.com",
+            "registrar": [
+                {
+                    "affiliation": "org0",
+                    "enrollId": "admin",
+                    "enrollSecret": "adminpw"
+                }
+            ],
+            "tlsCACerts": {
+                "path": "../crypto-config/peerOrganizations/org0.example.com/ca/tls/server.crt"
+            },
+            "url": "https://172.10.10.2:7054",
+            "x-mspid": "Org0MSP"
+        }
+    },
+    "channels": {
+        "mylittlechannel": {
+            "chaincodes": [
+                "mylittlecc:1.0"
+            ],
+            "orderers": [
+                "orderer0.example.com",
+                "orderer1.example.com"
+            ],
+            "peers": {
+                "peer0.org0.example.com": {
+                    "chaincodeQuery": true,
+                    "endorsingPeer": true,
+                    "eventSource": true,
+                    "ledgerQuery": true
+                },
+                "peer1.org0.example.com": {
+                    "chaincodeQuery": true,
+                    "endorsingPeer": true,
+                    "eventSource": true,
+                    "ledgerQuery": true
+                }
+            }
+        }
+    },
+    "client": {
+        "credentialStore": {
+            "cryptoStore": {
+                "path": "../.hfc-key-store/cvs"
+            },
+            "path": "../.hfc-key-store/kvs",
+            "wallet": "wedontusewallets"
+        },
+        "organization": "Org0"
+    },
+    "description": "The network that can cure SPARCs",
+    "name": "hlf-network-profile",
+    "orderers": {
+        "orderer0.example.com": {
+            "grpcOptions": {
+                "ssl-target-name-override": "orderer0.example.com"
+            },
+            "tlsCACerts": {
+                "path": "../crypto-config/ordererOrganizations/example.com/orderers/orderer0.example.com/tls/server.crt"
+            },
+            "url": "grpcs://172.10.10.2:7050"
+        },
+        "orderer1.example.com": {
+            "grpcOptions": {
+                "ssl-target-name-override": "orderer1.example.com"
+            },
+            "tlsCACerts": {
+                "path": "../crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/server.crt"
+            },
+            "url": "grpcs://172.10.10.2:7100"
+        }
+    },
+    "organizations": {
+        "Org0": {
+            "adminPrivateKey": {
+                "path": "../crypto-config/peerOrganizations/org0.example.com/users/Admin@org0.example.com/msp/keystore/63dc632b0ca862f136a25edd9212d9999c1d865383eb56a0413346d2a2c889d3_sk"
+            },
+            "certificateAuthorities": [
+                "ca.org0.example.com"
+            ],
+            "mspid": "Org0MSP",
+            "peers": [
+                "peer0.org0.example.com",
+                "peer1.org0.example.com"
+            ],
+            "signedCert": {
+                "path": "../crypto-config/peerOrganizations/org0.example.com/users/Admin@org0.example.com/msp/signcerts/Admin@org0.example.com-cert.pem"
+            }
+        }
+    },
+    "peers": {
+        "peer0.org0.example.com": {
+            "eventUrl": "grpcs://172.10.10.2:7053",
+            "grpcOptions": {
+                "hostnameOverride": "peer0.org0.example.com",
+                "ssl-target-name-override": "peer0.org0.example.com"
+            },
+            "tlsCACerts": {
+                "path": "../crypto-config/peerOrganizations/org0.example.com/peers/peer0.org0.example.com/tls/server.crt"
+            },
+            "url": "grpcs://172.10.10.2:7051"
+        },
+        "peer1.org0.example.com": {
+            "eventUrl": "grpcs://172.10.10.2:7103",
+            "grpcOptions": {
+                "hostnameOverride": "peer1.org0.example.com",
+                "ssl-target-name-override": "peer1.org0.example.com"
+            },
+            "tlsCACerts": {
+                "path": "../crypto-config/peerOrganizations/org0.example.com/peers/peer1.org0.example.com/tls/server.crt"
+            },
+            "url": "grpcs://172.10.10.2:7101"
+        }
+    },
+    "version": "1.0.0",
+    "x-fabricVersion": "v1.4.0",
+    "x-type": "hlfv1"
+}
