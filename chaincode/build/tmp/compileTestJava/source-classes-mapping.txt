@@ -1,0 +1,8 @@
+org/easteregg/chaincode/MockQueryResultsIterator.java
+ org.easteregg.chaincode.MockQueryResultsIterator
+org/easteregg/chaincode/MockKeyModification.java
+ org.easteregg.chaincode.MockKeyModification
+org/easteregg/chaincode/SkeletonCCTest.java
+ org.easteregg.chaincode.SkeletonCCTest
+org/easteregg/chaincode/global/TestConstants.java
+ org.easteregg.chaincode.global.TestConstants

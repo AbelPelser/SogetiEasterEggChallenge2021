@@ -1,0 +1,50 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '2.0.3'
+    id 'java'
+}
+
+group 'org.hyperledger.fabric-chaincode-java'
+version '1.4.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:1.4.0'
+    compile 'org.apache.commons:commons-lang3:3.0'
+    compile 'org.apache.commons:commons-math3:3.6.1'
+    compile 'org.json:json:20180813'
+    compile 'org.slf4j:slf4j-api:1.7.30'
+    compile 'org.slf4j:slf4j-simple:1.7.30'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:2.1.0'
+    testCompile 'org.assertj:assertj-core:3.11.1'
+    testCompile 'org.skyscreamer:jsonassert:1.5.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+	annotationProcessor 'org.projectlombok:lombok:1.18.16'
+	testCompileOnly 'org.projectlombok:lombok:1.18.16'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+}
+
+shadowJar {
+    baseName = 'chaincode'
+    version = null
+    classifier = null
+
+    manifest {
+        attributes 'Main-Class': 'org.easteregg.chaincode.SkeletonCC'
+    }
+}
+
+test {
+    testLogging {
+        showStandardStreams = true
+        exceptionFormat = 'full'
+    }
+}
