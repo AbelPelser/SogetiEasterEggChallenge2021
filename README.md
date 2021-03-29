@@ -19,11 +19,11 @@ to this idea will they begrudgingly let you have your treat.
 ## Instructions
 (I tried making this easier with a Dockerfile, proper entry points and so on, but decided to quit after midnight.)
 
-`docker pull apelser/eggchallenge`
+`docker pull apelser/eggchallenge:3.0`
 
-`docker network create --subnet=192.168.2.0/16 bcnet`
+`docker network create --subnet=172.10.10.0/16 bcnet`
 
-`docker run --net bcnet --ip 192.168.2.5 --privileged -d --name abelssubmission --network host apelser/eggchallenge`
+`docker run --net bcnet --ip 172.10.10.2 --privileged -d --name abelssubmission apelser/eggchallenge:3.0`
 
 `docker exec -it abelssubmission sh`
 
