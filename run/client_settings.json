@@ -8,11 +8,11 @@
     "channel": "mylittlechannel",
     "connection_profile": "./connection.json",
     "eventlogfile": "eventlog.txt",
-    "keyfile": "../crypto-config/peerOrganizations/org0.example.com/users/Egg000@org0.example.com/msp/keystore/9107569743ec8ef87d5602c7b0136cabd84b0c84d48f40e0b8dd2ebf428c3da2_sk",
+    "keyfile": "../crypto-config/peerOrganizations/org0.example.com/users/Egg000@org0.example.com/msp/keystore/9bb807b00a6c837d89931149d76079e12340eee9560279aca0a845d660ad2b88_sk",
     "logfile": "log.txt",
     "main_class": "client.egg.EggClient",
     "network_version": "hlf-network-profile:1.0_704761",
     "organization": "Org0",
     "username": "Egg000",
-    "working_directory": "/tmp/tmp"
+    "working_directory": "."
 }

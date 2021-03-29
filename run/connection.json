@@ -76,7 +76,7 @@
     "organizations": {
         "Org0": {
             "adminPrivateKey": {
-                "path": "../crypto-config/peerOrganizations/org0.example.com/users/Admin@org0.example.com/msp/keystore/63dc632b0ca862f136a25edd9212d9999c1d865383eb56a0413346d2a2c889d3_sk"
+                "path": "../crypto-config/peerOrganizations/org0.example.com/users/Admin@org0.example.com/msp/keystore/08bc229dc1586c648e80a749b2897890a70adb6ff659695da79c9ce11f9741ba_sk"
             },
             "certificateAuthorities": [
                 "ca.org0.example.com"
