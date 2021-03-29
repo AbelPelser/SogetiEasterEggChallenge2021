@@ -23,7 +23,7 @@ to this idea will they begrudgingly let you have your treat.
 
 `docker network create --subnet=172.10.10.0/16 bcnet`
 
-`docker run --net bcnet --ip 172.10.10.2 --privileged -d --name abelssubmission apelser/eggchallenge`
+`docker run --net bcnet --ip 172.10.10.2 --privileged -d --name abelssubmission apelser/eggchallenge:2.0`
 
 `docker exec -it abelssubmission sh`
 
