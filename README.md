@@ -24,10 +24,13 @@ to this idea will they begrudgingly let you have your treat.
 `docker network create --subnet=172.10.10.0/16 bcnet`
 
 Then one of the next two commands:
+
 On Linux:
+
 `docker run --net bcnet --ip 172.10.10.2 --privileged -d --name abelssubmission apelser/eggchallenge:3.0`
 
-On Windows
+On Windows:
+
 `docker run --net bcnet --ip 172.10.10.2 --privileged -d --name abelssubmission -p 7050:7050 -p 7100:7100 -p 7054:7054 -p 7053:7053 -p 7103:7103 -p 7101:7101 -p 7051:7051 apelser/eggchallenge:3.0`
 
 `docker exec -it abelssubmission sh`
