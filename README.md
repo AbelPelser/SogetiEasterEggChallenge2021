@@ -5,7 +5,7 @@ How can one possibly improve upon this? As any (well, some) manager will tell yo
 Automation, containerization, one-way functions and - crucially - **Blockchain**. My Easter Egg submission does all of this - and more!
 
 
-What is better than one Docker container? Yes, chocolate. But also: two Docker containers! And what is better than both? A Docker container *in* a Docker container!
+What is better than one Docker container? That's right, chocolate. But also: two Docker containers! And what is better than both? A Docker container *in* a Docker container!
 That's why this Easter Egg Generation Creation hosts a whopping *eleven* Docker containers in one giant übercontainer - of sorts.
 (It definitely, *definitely* has nothing to do with the fact that I couldn't sign up for AWS with my credit card.)
 
@@ -23,7 +23,15 @@ to this idea will they begrudgingly let you have your treat.
 
 `docker network create --subnet=172.10.10.0/16 bcnet`
 
+Then one of the next two commands:
+
+On Linux:
+
 `docker run --net bcnet --ip 172.10.10.2 --privileged -d --name abelssubmission apelser/eggchallenge:3.0`
+
+On Windows (this still seems to give networking issues, working on it):
+
+`docker run --net bcnet --ip 172.10.10.2 --privileged -d --name abelssubmission -p 7050:7050 -p 7051:7051 -p 7053:7053 -p 7054:7054 -p 7100:7100 -p 7101:7101 -p 7103:7103 apelser/eggchallenge:3.0`
 
 `docker exec -it abelssubmission sh`
 
