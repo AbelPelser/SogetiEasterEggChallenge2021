@@ -5,7 +5,7 @@ How can one possibly improve upon this? As any (well, some) manager will tell yo
 Automation, containerization, one-way functions and - crucially - **Blockchain**. My Easter Egg submission does all of this - and more!
 
 
-What is better than one Docker container? Yes, chocolate. But also: two Docker containers! And what is better than both? A Docker container *in* a Docker container!
+What is better than one Docker container? That's right, chocolate. But also: two Docker containers! And what is better than both? A Docker container *in* a Docker container!
 That's why this Easter Egg Generation Creation hosts a whopping *eleven* Docker containers in one giant übercontainer - of sorts.
 (It definitely, *definitely* has nothing to do with the fact that I couldn't sign up for AWS with my credit card.)
 
