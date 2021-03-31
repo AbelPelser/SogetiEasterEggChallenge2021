@@ -12,7 +12,7 @@
             "tlsCACerts": {
                 "path": "../crypto-config/peerOrganizations/org0.example.com/ca/tls/server.crt"
             },
-            "url": "https://172.10.10.2:7054",
+            "url": "https://127.0.0.1:7054",
             "x-mspid": "Org0MSP"
         }
     },
@@ -61,7 +61,7 @@
             "tlsCACerts": {
                 "path": "../crypto-config/ordererOrganizations/example.com/orderers/orderer0.example.com/tls/server.crt"
             },
-            "url": "grpcs://172.10.10.2:7050"
+            "url": "grpcs://127.0.0.1:7050"
         },
         "orderer1.example.com": {
             "grpcOptions": {
@@ -70,7 +70,7 @@
             "tlsCACerts": {
                 "path": "../crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/server.crt"
             },
-            "url": "grpcs://172.10.10.2:7100"
+            "url": "grpcs://127.0.0.1:7100"
         }
     },
     "organizations": {
@@ -93,7 +93,7 @@
     },
     "peers": {
         "peer0.org0.example.com": {
-            "eventUrl": "grpcs://172.10.10.2:7053",
+            "eventUrl": "grpcs://127.0.0.1:7053",
             "grpcOptions": {
                 "hostnameOverride": "peer0.org0.example.com",
                 "ssl-target-name-override": "peer0.org0.example.com"
@@ -101,10 +101,10 @@
             "tlsCACerts": {
                 "path": "../crypto-config/peerOrganizations/org0.example.com/peers/peer0.org0.example.com/tls/server.crt"
             },
-            "url": "grpcs://172.10.10.2:7051"
+            "url": "grpcs://127.0.0.1:7051"
         },
         "peer1.org0.example.com": {
-            "eventUrl": "grpcs://172.10.10.2:7103",
+            "eventUrl": "grpcs://127.0.0.1:7103",
             "grpcOptions": {
                 "hostnameOverride": "peer1.org0.example.com",
                 "ssl-target-name-override": "peer1.org0.example.com"
@@ -112,7 +112,7 @@
             "tlsCACerts": {
                 "path": "../crypto-config/peerOrganizations/org0.example.com/peers/peer1.org0.example.com/tls/server.crt"
             },
-            "url": "grpcs://172.10.10.2:7101"
+            "url": "grpcs://127.0.0.1:7101"
         }
     },
     "version": "1.0.0",

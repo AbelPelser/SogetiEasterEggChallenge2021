@@ -1,9 +1,0 @@
-[client.egg.EggClient]: Enter your name: 
-[client.egg.EggClient]: Storing user enrollment for Katinka of org0
-
-[client.egg.EggClient]: Sending PROPOSAL for invokeCC(getEgg, )(7442d90b693dd5efc07fab63f8226428db6592a3f932c120ab4bb67214a56266) took 35677403 nanoseconds!
-
-[client.egg.EggClient]: Pending transaction 7442d90b693dd5efc07fab63f8226428db6592a3f932c120ab4bb67214a56266 completed
-
-[client.egg.EggClient]: Event response time for 7442d90b693dd5efc07fab63f8226428db6592a3f932c120ab4bb67214a56266 was 2176807940 nanoseconds!
-
